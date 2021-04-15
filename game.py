@@ -31,7 +31,7 @@ def calc_winner():
     global score_player, score_cpu
 
     if p1_pick + cpu_pick in rules or cpu_pick + p1_pick in rules:
-        winner = rules.get(p1_pick + cpu_pick or rules.get(cpu_pick + p1_pick))
+        winner = rules.get(p1_pick + cpu_pick) or rules.get(cpu_pick + p1_pick)
         if p1_pick == winner:
             print('You win!')
             score_player += 1
