@@ -1,3 +1,5 @@
+# ver 1.1
+
 import random
 
 score_player = 0
