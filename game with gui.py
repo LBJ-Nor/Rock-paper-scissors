@@ -3,7 +3,7 @@ import random
 
 window = Tk()
 window.title("Rock, Paper, Scissors")
-window.geometry('600x400')
+window.geometry('300x200')
 
 score_player = 0
 score_cpu = 0
@@ -39,7 +39,7 @@ def calc_winner():
             return score_cpu
 
     elif p1_pick == cpu_pick:
-        result_text = "It's a draw"
+        result_text = "It's a draw!"
     else:
         print('error')
 
@@ -47,14 +47,14 @@ def calc_winner():
 def score_update():
     global game_text
     game_text.configure(text='')
-    game_text = Label(window, text=(f"""
-    You picked {p1_pick}
-    CPU picked {cpu_pick}
+    game_text = Label(window, width=20, text=(f"""
+You picked {p1_pick}
+CPU picked {cpu_pick}
 
-    {result_text}
+{result_text}
 
 *** Score ***
-P1: {score_player}
+You: {score_player}
 CPU: {score_cpu}
 """))
 
