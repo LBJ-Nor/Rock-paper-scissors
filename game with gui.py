@@ -82,9 +82,9 @@ def scissors_clicked():
     score_update()
 
 
-rock_button = Button(window, text="Rock", command=rock_clicked, padx=17, pady=15)
-paper_button = Button(window, text="Paper", command=paper_clicked, padx=15, pady=15)
-scissors_button = Button(window, text="Scissors", command=scissors_clicked, padx=9, pady=15)
+rock_button = Button(window, text="Rock", command=rock_clicked, width=10, pady=15)
+paper_button = Button(window, text="Paper", command=paper_clicked, width=10, pady=15)
+scissors_button = Button(window, text="Scissors", command=scissors_clicked, width=10, pady=15)
 quit_button = Button(window, text="Quit", command=window.destroy)
 
 rock_button.grid(column=1, row=1)
