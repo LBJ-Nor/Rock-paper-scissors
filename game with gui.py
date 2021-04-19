@@ -48,15 +48,15 @@ def score_update():
     global game_text
     game_text.configure(text='')
     game_text = Label(window, width=20, text=(f"""
-You picked {p1_pick}
-CPU picked {cpu_pick}
+    You picked {p1_pick}
+    CPU picked {cpu_pick}
 
-{result_text}
+    {result_text}
 
-*** Score ***
-You: {score_player}
-CPU: {score_cpu}
-"""))
+    *** Score ***
+    You: {score_player}
+    CPU: {score_cpu}
+    """))
 
     game_text.grid(column=5, row=0, rowspan=5)
 
