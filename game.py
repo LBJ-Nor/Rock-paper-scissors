@@ -15,8 +15,7 @@ rules = {
 def player_choose():
     while True:
         print('Rock, Paper, Scissors (R, P, S)')
-        user_input = input('Choose: ')
-        user_input = user_input.lower()
+        user_input = input('Choose: ').lower()
         if user_input == 'r':
             user_input = 'rock'
         elif user_input == 'p':
@@ -43,20 +42,20 @@ def calc_winner():
             score_cpu += 1
             return score_cpu
     else:
-        print("It's a draw")
+        print("Draw!")
 
 
 # Game loop
 while True:
     p1_pick = player_choose()
-    cpu_pick = (random.choice(choices))
-    print('')
+    cpu_pick = random.choice(choices)
+    print()
     print('You picked ' + p1_pick)
     print('CPU picked ' + cpu_pick)
     calc_winner()
 
     print(f"""
-    *** Score ****
+    *** Score ***
     You: {score_player}
     CPU: {score_cpu}
     """)
