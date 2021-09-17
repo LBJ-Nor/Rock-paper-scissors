@@ -5,6 +5,7 @@ import random
 score_player = 0
 score_cpu = 0
 choices = ['rock', 'paper', 'scissors']
+abbreviation = ['r', 'p', 's']
 rules = {
     'scissorspaper': 'scissors',
     'scissorsrock': 'rock',
@@ -16,12 +17,8 @@ def player_choose():
     while True:
         print('Rock, Paper, Scissors (R, P, S)')
         user_input = input('Choose: ').lower()
-        if user_input == 'r':
-            user_input = 'rock'
-        elif user_input == 'p':
-            user_input = 'paper'
-        elif user_input == 's':
-            user_input = 'scissors'
+        if user_input in abbreviation:
+            user_input = choices[abbreviation.index(user_input)]
 
         if user_input not in choices:
             print('Invalid choice. Try again')
