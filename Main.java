@@ -26,8 +26,7 @@ class Main {
     // win/lose/draw
     if (cpuChoice.equals(userChoice)) {
       System.out.println("Draw!");
-    }
-    else if (winConditions.contains(cpuChoice + userChoice)) {
+    } else if (winConditions.contains(cpuChoice + userChoice)) {
       System.out.println("You win!");
     } else {
       System.out.println("You lose!");
